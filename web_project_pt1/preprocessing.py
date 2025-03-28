@@ -17,7 +17,8 @@ class TextProcessor:
         """
         Nettoie le texte : suppression des caractères spéciaux et conversion en minuscules.
         """
-        text = re.sub(r"[^a-zA-Z0-9\s]", "", text)  
+        text = re.sub(r"[^a-zA-Z0-9\s-]", "", text)
+ 
         return text.lower().strip()
 
     def remove_stopwords_and_lemmatize(self, token_list: list) -> list:
